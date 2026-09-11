@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Ludo Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎲 3D Ludo Game 🎲</h1>
+        <div class="game-wrapper">
+            <canvas id="gameCanvas"></canvas>
+            <div class="controls">
+                <div class="players-info">
+                    <div id="currentPlayer" class="player-status">Current Player: <span class="player red">Player 1</span></div>
+                    <div class="dice-result">Dice: <span id="diceValue">0</span></div>
+                </div>
+                <button id="rollDice" class="btn btn-primary">🎲 Roll Dice</button>
+                <button id="newGame" class="btn btn-secondary">🔄 New Game</button>
+            </div>
+        </div>
+        <div class="game-info">
+            <p><strong>How to Play:</strong></p>
+            <ul>
+                <li>Click "Roll Dice" to roll the dice</li>
+                <li>Move your pieces according to the dice value</li>
+                <li>First player to move all 4 pieces home wins!</li>
+                <li>You need to get a 6 to start moving</li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.game-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+#gameCanvas {
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(to bottom, #e8f4f8, #b3d9ff);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.players-info {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.player-status {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.player {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.player.red {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+}
+
+.player.yellow {
+    background: linear-gradient(135deg, #ffd93d, #ffb700);
+}
+
+.player.blue {
+    background: linear-gradient(135deg, #4ecdc4, #44a08d);
+}
+
+.player.green {
+    background: linear-gradient(135deg, #95e1d3, #38a169);
+}
+
+.dice-result {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333;
+    border: 3px solid #667eea;
+}
+
+#diceValue {
+    color: #667eea;
+    font-size: 1.5em;
+    display: block;
+    margin-top: 5px;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    color: white;
+    box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(245, 87, 108, 0.6);
+}
+
+.game-info {
+    background: #f0f4ff;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 5px solid #667eea;
+}
+
+.game-info p {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.game-info ul {
+    list-style-position: inside;
+    color: #555;
+    line-height: 1.8;
+}
+
+.game-info li {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+    .game-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    #gameCanvas {
+        height: 400px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+}
